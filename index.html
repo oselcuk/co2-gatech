@@ -24,14 +24,16 @@
         <div class = "airTravelDiv">
             <h4 id="airTravel" class="textDesign"><img id="glyph" src="svg/si-glyph-paper-plane.svg"/>Air Travel</h4>
             <h4 id="dropDown"> CO<sub>2</sub> Emissions for </h4>
-
-        <button type="button" class="catChooser btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <strong>Georgia Tech</strong>
-        </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMe">
-                <button class="dropdown-item" type="button">Georgia Tech</button>
-                <button class="dropdown-item" type="button">College of Business</button>
+        <div class="dropdown">
+            <button type="button" class="catChooser btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <strong>Georgia Tech</strong>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="schoolDropdown">
+                <a class="dropdown-item" href="#">College of Computing</a>
+                <a class="dropdown-item" href="#">College of Business</a>
+                <a class="dropdown-item" href="#">Clown College</a>
             </div>
+        </div>
         From:
         <input type="date" name="dateofbirth" id="dateofbirth">
 
@@ -51,13 +53,15 @@
                 <div class="col-md-5 offset-md-2">
                     <div class="box">
                         <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
-                        <a href="https://www.google.com/">About this chart</a>
+                        <a href="https://www.google.com/">About this chart</a><br>
+                        <img src="graph1.png" height="315" width="420">
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="box">
                         <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
                         <a href="https://www.google.com/">About this chart</a>
+                        <img src="graph2.png" height="315" width="420">
                     </div>
                 </div>
             </div>
@@ -66,11 +70,13 @@
                     <div class="box">
                         <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
                         <a href="https://www.google.com/">About this chart</a>
+                        <img src="graph3.png" height="315" width="420">
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="box">
                         <h3 id="topEmitters" class="textDesign">Top emitters</h3>
+                        <img src="graph4.png" height="315" width="420">
                     </div>
                 </div>
             </div>
