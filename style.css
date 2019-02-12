@@ -24,6 +24,13 @@
     margin-top: -6.5px;
 }
 
+.container {
+    padding-right: 0;
+    padding-left: 0; 
+    margin-right: 0; 
+    margin-left: 0;
+}
+
 #airTravel {
     padding-left: 25px;
     background-color: 	#F0EEE2;
@@ -60,16 +67,6 @@
     margin-right: 10px;
 }
 
-#info{
-
-    padding-left: 25px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-#totalEmissions{
-
-}
 
 .box{
     padding-top: 15px;
