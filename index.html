@@ -70,7 +70,10 @@
                                 <div class="box">
                                     <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
                                     <a href="#" data-toggle="tooltip" title="*total emission explanation*">About this chart</a><br>
-                                    <p>{{apiData}}</p>
+                                    <GChart
+                                        type='ColumnChart'
+                                        :data='barChartData'
+                                    />
                                 </div>
                             </div>
 
@@ -78,7 +81,10 @@
                                 <div class="box">
                                     <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
                                     <a href="#" data-toggle="tooltip" title="*emissions by org explanation*">About this chart</a>
-                                    <img src="graph2.png" height="315" width="420">
+                                    <GChart
+                                        type="PieChart"
+                                        :data="pieChartData"
+                                    />
                                 </div>
                             </div>
 

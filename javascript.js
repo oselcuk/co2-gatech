@@ -5,17 +5,50 @@ var app = new Vue({
 
     data () {
         return {
-            apiData: []
+            apiData: [],
+            chartData: [
+                ['Organization', 'Total Emissions'],
+            ],
+            chartOptions: {
+                chart: {
+                    title: 'Emissions by Org.'
+                }
+            }
         }
     },
 
     mounted () {
-        axios
-            .get('http://127.0.0.1/departments')
-            .then(function(response){
-                console.log(response);
-                this.apiData = response.data.results;
+        return axios
+            .get('http://127.0.0.1:80/departments')
+            .then((response) => {
+                console.log(response.data.result);
+                this.apiData = response.data.result;
             })
+            .catch(error => console.log(error))
+    },
+
+    computed: {
+        pieChartData: function() {
+            const pieData = this.chartData;
+            for (let i = 0; i < this.apiData.length; i += 1) {
+                const point = [this.apiData[i].name, this.apiData[i].totalEmissions];
+                pieData.push(point);
+            }
+
+            return pieData;
+        },
+
+        barChartData: function() {
+            const barData = [
+                ['Year', 'Total Overall Emissions']
+            ];
+            var total = 0;
+            for (let i = 0; i < this.apiData.length; i += 1) {
+                total += this.apiData[i].totalEmissions;
+            }
+            barData.push(['2018', total]);
+            return barData;
+        }
     }
 
 })
