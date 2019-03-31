@@ -63,53 +63,57 @@
 
             <div class="col-md-10">
                 <div class="container">
-                    <div class="row">
+                    <div id="app">
+                        <div class="row">
 
-                        <div class="col-md-6">
-                            <div class="box">
-                                <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
-                                <a href="#" data-toggle="tooltip" title="*total emission explanation*">About this chart</a><br>
-                                <img src="graph1.png" height="315" width="420">
+                            <div class="col-md-6">
+                                <div class="box">
+                                    <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
+                                    <a href="#" data-toggle="tooltip" title="*total emission explanation*">About this chart</a><br>
+                                    <p>{{apiData}}</p>
+                                </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="box">
+                                    <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
+                                    <a href="#" data-toggle="tooltip" title="*emissions by org explanation*">About this chart</a>
+                                    <img src="graph2.png" height="315" width="420">
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="box">
-                                <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
-                                <a href="#" data-toggle="tooltip" title="*emissions by org explanation*">About this chart</a>
-                                <img src="graph2.png" height="315" width="420">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="box">
+                                    <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
+                                    <a href="#" data-toggle="tooltip" title="*emissions by trip mileage explanation*">About this chart</a>
+                                    <img src="graph3.png" height="315" width="420">
+                                </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="box">
+                                    <h3 id="topEmitters" class="textDesign">Top emitters</h3>
+                                    <a href="#" data-toggle="tooltip" title="*top emitters explanation*">About this chart</a>
+                                    <img src="graph4.png" height="315" width="420">
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </div>
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="box">
-                                <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
-                                <a href="#" data-toggle="tooltip" title="*emissions by trip mileage explanation*">About this chart</a>
-                                <img src="graph3.png" height="315" width="420">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="box">
-                                <h3 id="topEmitters" class="textDesign">Top emitters</h3>
-                                <a href="#" data-toggle="tooltip" title="*top emitters explanation*">About this chart</a>
-                                <img src="graph4.png" height="315" width="420">
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue-google-charts@latest/dist/vue-google-charts.browser.js"></script>
         <script type = "text/javascript" src = "javascript.js" ></script>
     </body>
 </html>
