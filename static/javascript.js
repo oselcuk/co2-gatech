@@ -19,7 +19,7 @@ var app = new Vue({
 
     mounted () {
         return axios
-            .get('http://127.0.0.1:80/departments')
+            .get('https://co2-gatech.appspot.com/api/departments')
             .then((response) => {
                 console.log(response.data.result);
                 this.apiData = response.data.result;

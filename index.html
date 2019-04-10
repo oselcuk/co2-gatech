@@ -14,19 +14,19 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet">
 
-        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="static/style.css" type="text/css">
     </head>
 
 
     <body>
         <div class = "InsightNav">
-            <img id="gtLogo" src="Screen%20Shot%202018-11-22%20at%203.52.57%20PM.png">
+            <img id="gtLogo" src="static/GT-Logo.png">
             <h3 id="CO2Insights" class = "textDesign">CO<sub>2</sub> Insights</h3>
             <hr id="greyLine" style="border: 1px solid #e3e4e5;" />
         </div>
 
         <div class = "airTravelDiv">
-            <h4 id="airTravel" class="textDesign"><img id="glyph" src="svg/si-glyph-paper-plane.svg"/>Air Travel</h4>
+            <h4 id="airTravel" class="textDesign"><img id="glyph" src="static/svg/si-glyph-paper-plane.svg"/>Air Travel</h4>
             <h4 id="dropDown"> CO<sub>2</sub> Emissions for </h4>
 
             <div class="dropdown">
@@ -56,9 +56,9 @@
         <div class = "container">
 
             <div class="col-md-2">
-                <h4 id="" class=""><img id="glyph" src="svg/ios-help-circle-outline.svg"/></h4>
+                <h4 id="" class=""><img id="glyph" src="static/svg/ios-help-circle-outline.svg"/></h4>
                 <h4 href="#" data-toggle="tooltip" title="Our goal is to educate the Georgia Tech community about carbon emissions via air travel. By selecting your desired department and date range, you may view various statistics related to this data. Feel free to look around!">About</h4>
-                <h4 id="" class=""><img id="glyph" src="svg/si-glyph-align-left.svg"/> Send Feedback</h4>
+                <h4 id="" class=""><img id="glyph" src="static/svg/si-glyph-align-left.svg"/> Send Feedback</h4>
             </div>
 
             <div class="col-md-10">
@@ -96,7 +96,7 @@
                                 <div class="box">
                                     <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
                                     <a href="#" data-toggle="tooltip" title="*emissions by trip mileage explanation*">About this chart</a>
-                                    <img src="graph3.png" height="315" width="420">
+                                    <img src="static/graph3.png" height="315" width="420">
                                 </div>
                             </div>
 
@@ -104,7 +104,7 @@
                                 <div class="box">
                                     <h3 id="topEmitters" class="textDesign">Top emitters</h3>
                                     <a href="#" data-toggle="tooltip" title="*top emitters explanation*">About this chart</a>
-                                    <img src="graph4.png" height="315" width="420">
+                                    <img src="static/graph4.png" height="315" width="420">
                                 </div>
 
                             </div>
@@ -120,6 +120,6 @@
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue-google-charts@latest/dist/vue-google-charts.browser.js"></script>
-        <script type = "text/javascript" src = "javascript.js" ></script>
+        <script type = "text/javascript" src = "static/javascript.js" ></script>
     </body>
 </html>
