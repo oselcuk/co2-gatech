@@ -20,103 +20,107 @@
 
 
     <body>
-        <div class = "InsightNav">
-            <img id="gtLogo" src="static/GT-Logo.png">
-            <h3 id="CO2Insights" class = "textDesign">CO<sub>2</sub> Insights</h3>
-            <hr id="greyLine" style="border: 1px solid #e3e4e5;" />
-        </div>
+        <div id="app">
+            <div class = "InsightNav">
+                <img id="gtLogo" src="static/GT-Logo.png">
+                <h3 id="CO2Insights" class = "textDesign">CO<sub>2</sub> Insights</h3>
+                <hr id="greyLine" style="border: 1px solid #e3e4e5;" />
+            </div>
 
-        <div class = "airTravelDiv">
-            <h4 id="airTravel" class="textDesign"><img id="glyph" src="static/svg/si-glyph-paper-plane.svg"/>Air Travel</h4>
-            <h4 id="dropDown"> CO<sub>2</sub> Emissions for </h4>
+            <div class = "airTravelDiv">
+                <h4 id="airTravel" class="textDesign"><img id="glyph" src="static/svg/si-glyph-paper-plane.svg"/>Air Travel</h4>
+                <h4 id="dropDown"> CO<sub>2</sub> Emissions for </h4>
 
-            <div class="dropdown">
-                <button type="button" class="catChooser btn btn-warning dropdown-toggle" id="schoolDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <strong>Georgia Tech</strong>
-                </button>
+                <div class="dropdown">
+                    <button type="button" class="catChooser btn btn-warning dropdown-toggle" id="schoolDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <strong>Georgia Tech</strong>
+                    </button>
 
-                <div class="dropdown-menu" aria-labelledby="schoolDropdown">
-                    <a class="dropdown-item" href="#">College of Computing</a>
-                    <a class="dropdown-item" href="#">College of Business</a>
-                    <a class="dropdown-item" href="#">Clown College</a>
+                    <div class="dropdown-menu" aria-labelledby="schoolDropdown">
+                        <a class="dropdown-item" href="#">College of Computing</a>
+                        <a class="dropdown-item" href="#">College of Business</a>
+                        <a class="dropdown-item" href="#">Clown College</a>
+                    </div>
+
                 </div>
 
+                From:
+                <input type="date" name="startdate" id="startdate" value="2016-01-01">
+
+                To:
+                <input type="date" name="enddate" id="enddate" value="2019-12-31">
+
             </div>
 
-            From:
-            <input type="date" name="dateofbirth" id="dateofbirth">
-
-            To:
-            <input type="date" name="dateofbirth" id="dateofbirth">
-
-        </div>
-
-        <hr style="border: 1px solid #e3e4e5;"/>
+            <hr style="border: 1px solid #e3e4e5;"/>
 
 
-        <div class = "container">
+            <div class = "container">
 
-            <div class="col-md-2">
-                <h4 id="" class=""><img id="glyph" src="static/svg/ios-help-circle-outline.svg"/></h4>
-                <h4 href="#" data-toggle="tooltip" title="Our goal is to educate the Georgia Tech community about carbon emissions via air travel. By selecting your desired department and date range, you may view various statistics related to this data. Feel free to look around!">About</h4>
-                <h4 id="" class=""><img id="glyph" src="static/svg/si-glyph-align-left.svg"/> Send Feedback</h4>
-            </div>
+                <div class="col-md-2">
+                    <h4 id="" class=""><img id="glyph" src="static/svg/ios-help-circle-outline.svg"/></h4>
+                    <h4 href="#" data-toggle="tooltip" title="Our goal is to educate the Georgia Tech community about carbon emissions via air travel. By selecting your desired department and date range, you may view various statistics related to this data. Feel free to look around!">About</h4>
+                    <h4 id="" class=""><img id="glyph" src="static/svg/si-glyph-align-left.svg"/> Send Feedback</h4>
+                </div>
 
-            <div class="col-md-10">
-                <div class="container">
-                    <div id="app">
-                        <div class="row">
+                <div class="col-md-10">
+                    <div class="container">
+                            <div class="row">
 
-                            <div class="col-md-6">
-                                <div class="box">
-                                    <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
-                                    <a href="#" data-toggle="tooltip" title="*total emission explanation*">About this chart</a><br>
-                                    <GChart
-                                        type='ColumnChart'
-                                        :data='barChartData'
-                                    />
+                                <div class="col-md-6">
+                                    <div class="box">
+                                        <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> emissions</h3>
+                                        <a href="#" data-toggle="tooltip" title="*total emission explanation*">About this chart</a><br>
+                                        <GChart
+                                            type='ColumnChart'
+                                            :data='columnChartData'
+                                        />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-6">
-                                <div class="box">
-                                    <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
-                                    <a href="#" data-toggle="tooltip" title="*emissions by org explanation*">About this chart</a>
-                                    <GChart
-                                        type="PieChart"
-                                        :data="pieChartData"
-                                    />
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="box">
-                                    <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
-                                    <a href="#" data-toggle="tooltip" title="*emissions by trip mileage explanation*">About this chart</a>
-                                    <img src="static/graph3.png" height="315" width="420">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="box">
-                                    <h3 id="topEmitters" class="textDesign">Top emitters</h3>
-                                    <a href="#" data-toggle="tooltip" title="*top emitters explanation*">About this chart</a>
-                                    <img src="static/graph4.png" height="315" width="420">
+                                <div class="col-md-6">
+                                    <div class="box">
+                                        <h3 id = "emissionsByOrg" class = "textDesign">CO<sub>2</sub> emissions by org unit</h3>
+                                        <a href="#" data-toggle="tooltip" title="*emissions by org explanation*">About this chart</a>
+                                        <GChart
+                                            type="PieChart"
+                                            :data="pieChartData"
+                                        />
+                                    </div>
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div class="row">
 
+                                <div class="col-md-6">
+                                    <div class="box">
+                                        <h3 id="emissionsByTrip" class="textDesign">CO<sub>2</sub> emissions by trip mileage</h3>
+                                        <a href="#" data-toggle="tooltip" title="*emissions by trip mileage explanation*">About this chart</a>
+                                        <GChart
+                                            type="BarChart"
+                                            :data="barChartData"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="box">
+                                        <h3 id="topEmitters" class="textDesign">Top emitters</h3>
+                                        <a href="#" data-toggle="tooltip" title="*top emitters explanation*">About this chart</a>
+                                        <GChart
+                                            type="LineChart"
+                                            :data="lineChartData"
+                                        />
+                                    </div>
+
+                                </div>
+
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
