@@ -1,7 +1,5 @@
 # CO<sub>2</sub> \@ Georgia Tech
 
-
-
 ### v0.1.0 (2019-04-19)
 
 #### Features
@@ -19,17 +17,24 @@
 n/a
 
 #### Known issues
-n/a
+ * Date and Department selectors currently unresponsive
+ * Charts not using the full width of the screen on wider monitors
+ * Some formatting issues on mobile
+ * "About this chart" not working on mobile
+ * Legend isn't readable for some graphs
+ * Equivalance information isn't present for the Total CO<sub>2</sub> graph
 
---------------------------------------------------------------------
+## Installation
+### Pre-requisites
+ * A web browser with JS ES6 support
 
-To run the project:
- * clone github.com/oselcuk/co2-gatech-server
- * make sure you have python 3
- * cd co2-gatech-server
- * pip install -r requirements.txt
- * python api.py
- * now open index.html in co2-gatech folder
+### Downloading
+ * `git clone git@github.com:oselcuk/co2-gatech.git` or [download the repo](https://github.com/oselcuk/co2-gatech/archive/master.zip) and unzip.
 
-Project Description:
-    At Georgia Tech, we are committed to sustainability, but air travel, one of the biggest culprits of carbon emissions, is currently missing from all current carbon calculations. Our team is proposing a system that will generate detailed and accurate reports of flight related carbon footprint based on simple expense reports. It will allow any Georgia Tech user to easily view reports for individual departments or the Institute as a whole, promoting openness and accountability on our path to carbon neutrality.
+### Deployment
+ * Set the `API_URL` variable in [javascript.js](static/javascript.js) to a running instance of [the API](https://github.com/oselcuk/co2-gatech-server).
+   * Note: If using with an API instance running on a different host, make sure to enable CORS either on the API side or in the browser you're testing on.
+ * Open [index.html](index.html) in your preferred browser.
+
+#### Deployment with the back-end
+Refer to the [Deployment with the frontend section of the API README](https://github.com/oselcuk/co2-gatech-server/blob/master/README.md#deployment-with-the-frontend) for instructions.
