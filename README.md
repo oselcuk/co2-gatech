@@ -1,5 +1,28 @@
 # CO<sub>2</sub> \@ Georgia Tech
 
+### v0.2.0 (2019-04-21)
+
+#### New Features
+ * Date and department pickers actually work
+ * Graphs now take up the full width of the screen
+ * Removed a couple of unused JS libraries to make loading faster
+
+#### Upcoming Features
+ * About page will better explain the data that is used
+
+#### Bug Fixes
+n/a
+
+#### Known issues
+ * Charts not using the full height of the screen
+ * Some formatting issues on mobile
+ * "About this chart" not working on mobile
+ * Legend isn't readable for some graphs
+ * Equivalance information isn't present for the Total CO<sub>2</sub> graph
+ * "To Date" can currently be set to earlier than "From Date" which breaks graphs
+ * Graphs show errors while waiting for the data to load
+
+
 ### v0.1.0 (2019-04-19)
 
 #### Features
