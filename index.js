@@ -1,5 +1,4 @@
 let API_URL = 'co2-gatech.appspot.com/api';
-// let API_URL = 'http://localhost/api';
 
 var app = new Vue({
     el: "#app",
@@ -32,7 +31,6 @@ var app = new Vue({
             ].concat(this.initialSummary.map(dep => (
                 {text: dep.name, value: dep.department}))
             );
-            console.log('Setting departments to ', all);
             return all;
         },
 
@@ -68,7 +66,6 @@ var app = new Vue({
             haulTypes.forEach((haul) => byHaul[haul] = 0 );
             for (var i = 0; i < this.yearData.length; i++) {
                 for (const [haul, emission] of Object.entries(this.yearData[i].emissionsByHaul)) {
-                    console.log(haul, emission);
                     byHaul[haul] += emission.emissions;
                 }
             }
@@ -110,7 +107,6 @@ var app = new Vue({
         loadDepartmentsData (args={}) {
             axios.get(API_URL + '/departments', {params: args})
             .then((response) => {
-                console.log(response.data);
                 this.summary = response.data.result;
                 if (this.initialSummary.length == 0) {
                     this.initialSummary = this.summary;
@@ -121,7 +117,6 @@ var app = new Vue({
         loadTopEmittersData (args={}) {
             axios.get(API_URL + '/top_emitters', {params: args})
             .then((response) => {
-                console.log(response.data);
                 this.emitterData = response.data.result;
             })
             .catch(error => console.log(error));
@@ -130,7 +125,6 @@ var app = new Vue({
             axios.get(API_URL + '/departments/' + this.activeDepartment, {
                 params: Object.assign({}, args, {granularity: 'year'})
             }).then((response) => {
-                console.log(response.data);
                 this.yearData = response.data;
             })
             .catch(error => console.log(error))
