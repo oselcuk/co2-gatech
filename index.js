@@ -1,5 +1,5 @@
-// let API_URL = 'co2-gatech.appspot.com/api';
-let API_URL = 'http://localhost/api';
+let API_URL = 'co2-gatech.appspot.com/api';
+// let API_URL = 'http://localhost/api';
 
 var app = new Vue({
     el: "#app",
