@@ -10,7 +10,15 @@ var app = new Vue({
         yearData: [],
         initialSummary: [],
         summary: [],
-        emitterData: []
+        emitterData: [],
+        totalYearOptions: {
+            legend: {position: 'top', alignment: 'center'},
+            vAxis: {title: 'Pounds of CO2 Emitted'}
+        },
+        totalMileageOptions: {
+            legend: {position: 'top', alignment: 'center'},
+            hAxis: {title: 'Pounds of CO2 Emitted'}
+        }
     },
 
     components: {
@@ -86,8 +94,10 @@ var app = new Vue({
                     subtitle: 'Top 10 emitters by percent of emissions they cause'
                 },
                 vAxis: {
-                    format: 'percent'
-                }
+                    format: 'percent',
+                    title: '% of Total Emissions'
+                },
+                legend: {position: 'top', alignment: 'center'}
             };
         },
 
