@@ -13,15 +13,15 @@ var app = new Vue({
         totalYearOptions: {
             legend: {position: 'top', alignment: 'center'},
             vAxis: {title: 'Pounds of CO2 Emitted'},
-            height: 300
+            height: 250
         },
         totalMileageOptions: {
             legend: {position: 'top', alignment: 'center'},
             hAxis: {title: 'Pounds of CO2 Emitted'},
-            height: 300
+            height: 250
         },
         emissionsByDepartmentOptions: {
-            height: 300
+            height: 250
         }
     },
 
@@ -102,7 +102,7 @@ var app = new Vue({
                     title: '% of Total Emissions'
                 },
                 legend: {position: 'top', alignment: 'center'},
-                height: 400
+                height: 250
             };
         },
 
