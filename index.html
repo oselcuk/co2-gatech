@@ -55,10 +55,8 @@
                             <b-row>
                                 <b-col md="6">
                                     <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> Emissions Year</h3>
-                                    <h6 class = "textDesign">On average, a typical passenger vehicle emits around 4.6 metric tons of CO<sub>2</sub> per year.</h6>
                                     <a href="#" data-toggle="tooltip" title="This graph shows the total carbon emissions output.">About this chart</a><br>
                                     <gchart type="ColumnChart" :data="totalEmissionsData"/>
-
                                 </b-col>
                                 <b-col md="6">
                                     <h3 id = "emissionsByDepartment" class = "textDesign">CO<sub>2</sub> Emissions by Department</h3>
@@ -70,12 +68,10 @@
                                 <b-col md="6">
                                     <h3 id = "emissionsByTrip" class = "textDesign">Total CO<sub>2</sub> Emissions by Trip Mileage</h3>
                                     <a href="#" data-toggle="tooltip" title="This chart displays the total mileage involved in carbon emissions.">About this chart</a><br>
-                                    <h6 class = "textDesign">Almost all emissions result from taking long haul flights, so steps should be taken to reduce availability to these flights.</h6>
                                     <gchart type="BarChart" :data="emissionsByTripData"/>
                                 </b-col>
                                 <b-col md="6">
                                     <h3 id = "topEmitters" class = "textDesign">Top CO<sub>2</sub> Emitters</h3>
-                                    <h6 class = "textDesign">The top ten carbon emitters account for almost one-third of the total faculty emissions, so encouraging more telecommuting among this group could make a huge impact on overall emissions.</h6>
                                     <a href="#" data-toggle="tooltip" title="This chart shows a breakdown of the top 10 individuals by total carbon emissions.">About this chart</a><br>
                                     <gchart type="ColumnChart" :data="topEmittersData" :options="topEmittersOptions"/>
                                 </b-col>
