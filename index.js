@@ -3,9 +3,8 @@ let API_URL = '/api';
 var app = new Vue({
     el: "#app",
     data: {
-        message: "Hello",
-        fromDate: null, //new Date(2015, 1),
-        toDate: null, //Date.now(),
+        fromDate: null,
+        toDate: null,
         activeDepartment: "all",
         yearData: [],
         initialSummary: [],
@@ -13,11 +12,16 @@ var app = new Vue({
         emitterData: [],
         totalYearOptions: {
             legend: {position: 'top', alignment: 'center'},
-            vAxis: {title: 'Pounds of CO2 Emitted'}
+            vAxis: {title: 'Pounds of CO2 Emitted'},
+            height: 300
         },
         totalMileageOptions: {
             legend: {position: 'top', alignment: 'center'},
-            hAxis: {title: 'Pounds of CO2 Emitted'}
+            hAxis: {title: 'Pounds of CO2 Emitted'},
+            height: 300
+        },
+        emissionsByDepartmentOptions: {
+            height: 300
         }
     },
 
@@ -97,7 +101,8 @@ var app = new Vue({
                     format: 'percent',
                     title: '% of Total Emissions'
                 },
-                legend: {position: 'top', alignment: 'center'}
+                legend: {position: 'top', alignment: 'center'},
+                height: 400
             };
         },
 

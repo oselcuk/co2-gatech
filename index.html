@@ -19,7 +19,7 @@
     <body>
         <div id="app">
             <div class = "InsightNav">
-                <img id="gtLogo" src="gt-logo.png">
+                <img id="gtLogo" src="https://raw.githubusercontent.com/oselcuk/co2-gatech/master/gt-logo.png">
                 <h3 id="CO2Insights" class = "textDesign">CO<sub>2</sub> Insights</h3>
                 <hr id="greyLine" style="border: 1px solid #e3e4e5;">
             </div>
@@ -39,22 +39,22 @@
                 </b-row>
             </b-container>
             <hr style="border: 1px solid #e3e4e5;"/>
-            <b-container fluid>
+            <b-container>
                 <b-row>
-                    <b-col md="2">
-
-                        <h4 href="#" data-toggle="tooltip" title="Our goal is to educate the Georgia Tech community about carbon emissions via air travel. By selecting your desired department and date range, you may view various statistics related to this data. Feel free to look around!"><i class="far fa-question-circle"></i>  About</h4>
-
-                        <a href="https://forms.gle/JG3pHCSXHrPLSwxP8" style="text-decoration: none; color: inherit;"><h4><i class="fas fa-align-left"></i> Send Feedback</h4></a>
+                    <b-col md="1">
+                        <div style="margin-left:2%">
+                            <h4 href="#" data-toggle="tooltip" title="Our goal is to educate the Georgia Tech community about carbon emissions via air travel. By selecting your desired department and date range, you may view various statistics related to this data. Feel free to look around!"><i class="far fa-question-circle"></i>  About</h4>
+                            <a href="https://forms.gle/JG3pHCSXHrPLSwxP8" style="text-decoration: none; color: inherit;"><h4><i class="fas fa-align-left"></i> Send Feedback</h4></a>
+                        </div>
                     </b-col>
-                    <b-col md="10">
+                    <b-col md="11">
                         <b-container fluid>
                             <b-row>
                                 <b-col md="6">
                                     <h3 id = "totalEmissions" class = "textDesign">Total CO<sub>2</sub> Emissions Year</h3>
-                                    <h6 class = "textDesign">On average, a typical passenger vehicle emits around 4.6 metric tons of CO<sub>2</sub> per year.</h6>
+                                    <h6 class = "textDesign">On average, a typical passenger vehicle emits around 10,000 pounds of CO<sub>2</sub> per year.<br>The average American causes around 44,000 pounds of emissions per year.</h6>
                                     <a href="#" data-toggle="tooltip" title="This graph shows the total carbon emissions output.">About this chart</a><br>
-                                    <gchart type="ColumnChart" :data="totalEmissionsData" :options='totalYearOptions'/>
+                                    <gchart type="ColumnChart" :data="totalEmissionsData" :options="totalYearOptions"/>
                                 </b-col>
                                 <b-col md="6">
                                     <h3 id = "emissionsByDepartment" class = "textDesign">CO<sub>2</sub> Emissions by Department</h3>
@@ -65,9 +65,9 @@
                             <b-row>
                                 <b-col md="6">
                                     <h3 id = "emissionsByTrip" class = "textDesign">Total CO<sub>2</sub> Emissions by Trip Mileage</h3>
-                                    <h6 class = "textDesign">Almost all emissions result from taking long haul flights, so steps should be taken to reduce availability to these flights.</h6>
+                                    <h6 class = "textDesign">Almost 70% of emissions result from taking long haul flights, so steps should be taken to reduce availability to these flights.</h6>
                                     <a href="#" data-toggle="tooltip" title="This chart displays the total mileage involved in carbon emissions.">About this chart</a><br>
-                                    <gchart type="BarChart" :data="emissionsByTripData" :options='totalMileageOptions'/>
+                                    <gchart type="BarChart" :data="emissionsByTripData" :options="totalMileageOptions"/>
                                 </b-col>
                                 <b-col md="6">
                                     <h3 id = "topEmitters" class = "textDesign">Top CO<sub>2</sub> Emitters</h3>
